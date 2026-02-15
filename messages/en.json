@@ -1,0 +1,44 @@
+{
+    "Index": {
+        "title": "Optimrental - Car Rental & Shuttle",
+        "hero": {
+            "title": "Optimrental Car Rental & Shuttle",
+            "subtitle": "Your premium partner for rentals and shuttle services in Switzerland. Quality and reliability for every journey.",
+            "cta": "Book Now"
+        },
+        "intro": "Welcome to Optimrental, your reliable partner for mobility in Switzerland.",
+        "services": "Our services include affordable car rentals and top-notch shuttle services for every need.",
+        "vehicles": "Our Vehicles",
+        "contact": "Contact Us"
+    },
+    "Booking": {
+        "title": "Book a Vehicle",
+        "selectVehicle": "Select Vehicle",
+        "date": "Date",
+        "hours": "Hours",
+        "email": "Email Address",
+        "totalPrice": "Total Price",
+        "submit": "Submit Booking",
+        "success": "Booking successful! You will receive a confirmation email shortly.",
+        "error": "Booking error. Please try again.",
+        "perHour": "CHF / hr"
+    },
+    "Admin": {
+        "login": {
+            "title": "Admin Login",
+            "email": "Email",
+            "password": "Password",
+            "submit": "Sign In"
+        },
+        "dashboard": {
+            "title": "Admin Dashboard",
+            "vehicles": "Manage Vehicles",
+            "bookings": "View Bookings",
+            "addVehicle": "Add New Vehicle",
+            "edit": "Edit",
+            "delete": "Delete",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "Index": {
+    "title": "Optimrental - Autovermietung & Shuttle",
+    "hero": {
+      "title": "Optimrental Autovermietung & Shuttle",
+      "subtitle": "Ihr Premium-Partner für Vermietungen und Shuttleservices in der Schweiz. Qualität und Zuverlässigkeit für jede Reise.",
+      "cta": "Jetzt buchen"
+    },
+    "intro": "Willkommen bei Optimrental, Ihrem zuverlässigen Partner für Mobilität in der Schweiz.",
+    "services": "Unsere Dienstleistungen umfasst erschwingliche Autovermietungen und erstklassige Shuttle-Services für jeden Bedarf.",
+    "vehicles": "Unsere Fahrzeuge",
+    "contact": "Kontaktieren Sie uns"
+  },
+  "Booking": {
+    "title": "Fahrzeug buchen",
+    "selectVehicle": "Fahrzeug auswählen",
+    "date": "Datum",
+    "hours": "Stunden",
+    "email": "E-Mail-Adresse",
+    "totalPrice": "Gesamtpreis",
+    "submit": "Buchung absenden",
+    "success": "Buchung erfolgreich! Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+    "error": "Fehler bei der Buchung. Bitte versuchen Sie es erneut.",
+    "perHour": "CHF / Std"
+  },
+  "Admin": {
+    "login": {
+      "title": "Admin-Login",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit": "Anmelden"
+    },
+    "dashboard": {
+      "title": "Admin-Dashboard",
+      "vehicles": "Fahrzeuge verwalten",
+      "bookings": "Buchungen ansehen",
+      "addVehicle": "Neues Fahrzeug",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "confirm": "Bestätigen",
+      "cancel": "Stornieren"
+    }
+  }
+}
