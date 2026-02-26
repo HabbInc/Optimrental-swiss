@@ -77,7 +77,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
                 </div>
 
                 <div className="relative z-20 max-w-7xl mx-auto w-full text-center lg:text-left lg:px-12 space-y-8 animate-in fade-in slide-in-from-left-4 duration-1000">
-                    <div className="inline-flex items-center gap-2 bg-amber-500/90 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 text-slate-900 text-xs font-black uppercase tracking-[0.2em]">
+                    <div className="inline-flex items-center gap-2 bg-amber-500/90 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 text-slate-900 text-xs font-black uppercase tracking-[0.2em] sm:mx-0 lg:ml-8 lg:mt-2">
                         <Star className="w-3.5 h-3.5 fill-slate-900" />
                         <span>Swiss Premium Service</span>
                     </div>
@@ -213,7 +213,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
                             </div>
                             <div>
                                 <p className="text-[10px] font-black uppercase text-slate-500 mb-1 tracking-widest">Call Us</p>
-                                <p className="text-white font-bold text-lg hover:text-amber-500 cursor-pointer transition-colors">+41 00 000 00 00</p>
+                                <p className="text-white font-bold text-lg hover:text-amber-500 cursor-pointer transition-colors">+44791226646</p>
                             </div>
                         </div>
                     </div>
@@ -243,7 +243,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
                             rel="noopener noreferrer"
                             className="text-slate-600 text-[10px] font-black uppercase tracking-widest hover:text-amber-500 transition-colors"
                         >
-                            Developed by HABB (PVT) LTD
+                            Developed by HABB
                         </a>
                     </div>
                     <div className="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
