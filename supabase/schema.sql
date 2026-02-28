@@ -65,3 +65,21 @@ CREATE POLICY "Admins can update bookings" ON bookings
 -- ALTER TABLE bookings ADD COLUMN nationality TEXT;
 -- ALTER TABLE bookings ADD COLUMN mobile_no TEXT;
 -- ALTER TABLE vehicles ADD COLUMN images TEXT[] DEFAULT '{}';
+
+-- Vehicle specification columns
+-- ALTER TABLE vehicles ADD COLUMN manufacturer TEXT;
+-- ALTER TABLE vehicles ADD COLUMN model TEXT;
+-- ALTER TABLE vehicles ADD COLUMN year INTEGER;
+-- ALTER TABLE vehicles ADD COLUMN transmission TEXT;
+-- ALTER TABLE vehicles ADD COLUMN fuel_type TEXT;
+-- ALTER TABLE vehicles ADD COLUMN width NUMERIC;
+-- ALTER TABLE vehicles ADD COLUMN length NUMERIC;
+-- ALTER TABLE vehicles ADD COLUMN height NUMERIC;
+-- ALTER TABLE vehicles ADD COLUMN curb_weight NUMERIC;
+-- ALTER TABLE vehicles ADD COLUMN max_gross_weight NUMERIC;
+-- ALTER TABLE vehicles ADD COLUMN euro_class TEXT;
+-- ALTER TABLE vehicles ADD COLUMN winter_ready BOOLEAN DEFAULT false;
+-- ALTER TABLE vehicles ADD COLUMN winter_tires BOOLEAN DEFAULT false;
+-- ALTER TABLE vehicles ADD COLUMN studded_tires BOOLEAN DEFAULT false;
+-- ALTER TABLE vehicles ADD COLUMN child_seat_space BOOLEAN DEFAULT false;
+-- ALTER TABLE vehicles ADD COLUMN seat_count INTEGER;

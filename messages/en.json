@@ -1,46 +1,73 @@
 {
-    "Index": {
-        "title": "Optimrental - Car Rental & Shuttle",
-        "hero": {
-            "title": "Optimrental Car Rental & Shuttle",
-            "subtitle": "Your premium partner for rentals and shuttle services in Switzerland. Quality and reliability for every journey.",
-            "cta": "Book Now"
-        },
-        "intro": "Welcome to Optimrental, your reliable partner for mobility in Switzerland.",
-        "services": "Our services include affordable car rentals and top-notch shuttle services for every need.",
-        "vehicles": "Our Vehicles",
-        "contact": "Contact Us"
+  "Index": {
+    "title": "Optimrental - Car Rental & Shuttle",
+    "hero": {
+      "title": "Optimrental Car Rental & Shuttle",
+      "subtitle": "Your premium partner for rentals and shuttle services in Switzerland. Quality and reliability for every journey.",
+      "cta": "Book Now"
     },
-    "Booking": {
-        "title": "Book a Vehicle",
-        "selectVehicle": "Select Vehicle",
-        "date": "Date",
-        "hours": "Hours",
-        "days": "Days",
-        "email": "Email Address",
-        "totalPrice": "Total Price",
-        "submit": "Submit Booking",
-        "success": "Booking successful! You will receive a confirmation email shortly.",
-        "error": "Booking error. Please try again.",
-        "perHour": "CHF / hr",
-        "perDay": "CHF / day"
+    "intro": "Welcome to Optimrental, your reliable partner for mobility in Switzerland.",
+    "services": "Our services include affordable car rentals and top-notch shuttle services for every need.",
+    "vehicles": "Our Vehicles",
+    "contact": "Contact Us"
+  },
+  "VehicleSpecs": {
+    "manufacturer": "Manufacturer",
+    "model": "Model",
+    "year": "Year",
+    "transmission": "Transmission",
+    "automatic": "Automatic",
+    "manual": "Manual",
+    "fuelType": "Fuel Type",
+    "diesel": "Diesel",
+    "petrol": "Petrol",
+    "electric": "Electric",
+    "hybrid": "Hybrid",
+    "width": "Width",
+    "length": "Length",
+    "height": "Height",
+    "curbWeight": "Curb Weight",
+    "maxGrossWeight": "Max Gross Weight",
+    "euroClass": "Euro Emission Class",
+    "winterReady": "Winter Ready",
+    "winterTires": "Winter Tires",
+    "studdedTires": "Studded Winter Tires",
+    "childSeatSpace": "Space for Child Seat",
+    "seatCount": "Seat Count",
+    "seats": "Seats",
+    "dimensions": "Dimensions & Weight",
+    "winterSafety": "Winter & Safety"
+  },
+  "Booking": {
+    "title": "Book a Vehicle",
+    "selectVehicle": "Select Vehicle",
+    "date": "Date",
+    "hours": "Hours",
+    "days": "Days",
+    "email": "Email Address",
+    "totalPrice": "Total Price",
+    "submit": "Submit Booking",
+    "success": "Booking successful! You will receive a confirmation email shortly.",
+    "error": "Booking error. Please try again.",
+    "perHour": "CHF / hr",
+    "perDay": "CHF / day"
+  },
+  "Admin": {
+    "login": {
+      "title": "Admin Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In"
     },
-    "Admin": {
-        "login": {
-            "title": "Admin Login",
-            "email": "Email",
-            "password": "Password",
-            "submit": "Sign In"
-        },
-        "dashboard": {
-            "title": "Admin Dashboard",
-            "vehicles": "Manage Vehicles",
-            "bookings": "View Bookings",
-            "addVehicle": "Add New Vehicle",
-            "edit": "Edit",
-            "delete": "Delete",
-            "confirm": "Confirm",
-            "cancel": "Cancel"
-        }
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "vehicles": "Manage Vehicles",
+      "bookings": "View Bookings",
+      "addVehicle": "Add New Vehicle",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
     }
+  }
 }
