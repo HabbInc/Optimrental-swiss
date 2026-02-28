@@ -86,6 +86,23 @@ export default function AdminVehiclesPage() {
             images: uploadedImages,
             is_available: formData.get('is_available') === 'on',
             features: selectedFeatures,
+            // Vehicle specifications
+            manufacturer: formData.get('manufacturer') as string || null,
+            model: formData.get('model') as string || null,
+            year: formData.get('year') ? Number(formData.get('year')) : null,
+            transmission: formData.get('transmission') as string || null,
+            fuel_type: formData.get('fuel_type') as string || null,
+            width: formData.get('width') ? Number(formData.get('width')) : null,
+            length: formData.get('length') ? Number(formData.get('length')) : null,
+            height: formData.get('height') ? Number(formData.get('height')) : null,
+            curb_weight: formData.get('curb_weight') ? Number(formData.get('curb_weight')) : null,
+            max_gross_weight: formData.get('max_gross_weight') ? Number(formData.get('max_gross_weight')) : null,
+            euro_class: formData.get('euro_class') as string || null,
+            winter_ready: formData.get('winter_ready') === 'on',
+            winter_tires: formData.get('winter_tires') === 'on',
+            studded_tires: formData.get('studded_tires') === 'on',
+            child_seat_space: formData.get('child_seat_space') === 'on',
+            seat_count: formData.get('seat_count') ? Number(formData.get('seat_count')) : null,
         };
 
         let error;
@@ -146,8 +163,8 @@ export default function AdminVehiclesPage() {
                             <Plus size={20} /> Add Vehicle
                         </Button>
                     </DialogTrigger>
-                    <DialogContent className="rounded-3xl max-w-lg p-0 border-none overflow-hidden sm:rounded-3xl">
-                        <div className="bg-slate-900 p-8 text-white">
+                    <DialogContent className="rounded-3xl max-w-2xl p-0 border-none overflow-hidden sm:rounded-3xl max-h-[90vh] overflow-y-auto">
+                        <div className="bg-slate-900 p-8 text-white sticky top-0 z-10">
                             <DialogTitle className="text-2xl font-black uppercase tracking-tight">
                                 {editingVehicle ? 'Edit Vehicle' : 'Add New Vehicle'}
                             </DialogTitle>
@@ -166,6 +183,109 @@ export default function AdminVehiclesPage() {
                                     <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Price (CHF/day)</Label>
                                     <Input name="price" type="number" step="0.01" defaultValue={editingVehicle?.price_per_hour} required className="h-12 rounded-xl" />
                                 </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Seat Count</Label>
+                                    <Input name="seat_count" type="number" defaultValue={editingVehicle?.seat_count} className="h-12 rounded-xl" placeholder="e.g., 5" />
+                                </div>
+
+                                {/* Vehicle Specifications Section */}
+                                <div className="col-span-2 pt-4">
+                                    <h3 className="uppercase text-xs font-bold tracking-widest text-amber-600 mb-4 flex items-center gap-2">
+                                        <CarIcon size={16} /> Vehicle Specifications
+                                    </h3>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Manufacturer</Label>
+                                    <Input name="manufacturer" defaultValue={editingVehicle?.manufacturer} className="h-12 rounded-xl" placeholder="e.g., Mercedes-Benz" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Model</Label>
+                                    <Input name="model" defaultValue={editingVehicle?.model} className="h-12 rounded-xl" placeholder="e.g., S-Class" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Year</Label>
+                                    <Input name="year" type="number" defaultValue={editingVehicle?.year} className="h-12 rounded-xl" placeholder="e.g., 2024" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Transmission</Label>
+                                    <select name="transmission" defaultValue={editingVehicle?.transmission || ''} className="w-full h-12 rounded-xl border border-input px-3 bg-background">
+                                        <option value="">Select...</option>
+                                        <option value="Automatic">Automatic</option>
+                                        <option value="Manual">Manual</option>
+                                    </select>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Fuel Type</Label>
+                                    <select name="fuel_type" defaultValue={editingVehicle?.fuel_type || ''} className="w-full h-12 rounded-xl border border-input px-3 bg-background">
+                                        <option value="">Select...</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="Petrol">Petrol</option>
+                                        <option value="Electric">Electric</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Euro Class</Label>
+                                    <select name="euro_class" defaultValue={editingVehicle?.euro_class || ''} className="w-full h-12 rounded-xl border border-input px-3 bg-background">
+                                        <option value="">Select...</option>
+                                        <option value="Euro 6">Euro 6</option>
+                                        <option value="Euro 6d">Euro 6d</option>
+                                        <option value="Euro 6d-TEMP">Euro 6d-TEMP</option>
+                                        <option value="Euro 5">Euro 5</option>
+                                    </select>
+                                </div>
+
+                                {/* Dimensions Section */}
+                                <div className="col-span-2 pt-4">
+                                    <h3 className="uppercase text-xs font-bold tracking-widest text-amber-600 mb-4">Dimensions & Weight</h3>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Width (cm)</Label>
+                                    <Input name="width" type="number" step="0.1" defaultValue={editingVehicle?.width} className="h-12 rounded-xl" placeholder="e.g., 190" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Length (cm)</Label>
+                                    <Input name="length" type="number" step="0.1" defaultValue={editingVehicle?.length} className="h-12 rounded-xl" placeholder="e.g., 520" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Height (cm)</Label>
+                                    <Input name="height" type="number" step="0.1" defaultValue={editingVehicle?.height} className="h-12 rounded-xl" placeholder="e.g., 150" />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Curb Weight (kg)</Label>
+                                    <Input name="curb_weight" type="number" defaultValue={editingVehicle?.curb_weight} className="h-12 rounded-xl" placeholder="e.g., 1850" />
+                                </div>
+                                <div className="space-y-2 col-span-2">
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Max Gross Weight (kg)</Label>
+                                    <Input name="max_gross_weight" type="number" defaultValue={editingVehicle?.max_gross_weight} className="h-12 rounded-xl" placeholder="e.g., 2500" />
+                                </div>
+
+                                {/* Winter & Safety Options */}
+                                <div className="col-span-2 pt-4">
+                                    <h3 className="uppercase text-xs font-bold tracking-widest text-amber-600 mb-4">Winter & Safety Options</h3>
+                                </div>
+
+                                <div className="col-span-2 grid grid-cols-2 gap-4 bg-slate-50 p-6 rounded-2xl">
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" name="winter_ready" id="winter_ready" defaultChecked={editingVehicle?.winter_ready} className="w-4 h-4 rounded accent-amber-500" />
+                                        <Label htmlFor="winter_ready" className="text-sm cursor-pointer">Winter Ready</Label>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" name="winter_tires" id="winter_tires" defaultChecked={editingVehicle?.winter_tires} className="w-4 h-4 rounded accent-amber-500" />
+                                        <Label htmlFor="winter_tires" className="text-sm cursor-pointer">Winter Tires</Label>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" name="studded_tires" id="studded_tires" defaultChecked={editingVehicle?.studded_tires} className="w-4 h-4 rounded accent-amber-500" />
+                                        <Label htmlFor="studded_tires" className="text-sm cursor-pointer">Studded Winter Tires</Label>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <input type="checkbox" name="child_seat_space" id="child_seat_space" defaultChecked={editingVehicle?.child_seat_space} className="w-4 h-4 rounded accent-amber-500" />
+                                        <Label htmlFor="child_seat_space" className="text-sm cursor-pointer">Space for Child Seat</Label>
+                                    </div>
+                                </div>
+
                                 <div className="space-y-2 col-span-2">
                                     <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Vehicle Images</Label>
                                     <div className="flex flex-col gap-4">

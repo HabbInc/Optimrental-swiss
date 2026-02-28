@@ -8,6 +8,23 @@ export interface Vehicle {
     is_available: boolean;
     features?: string[];
     created_at?: string;
+    // Vehicle specifications
+    manufacturer?: string;
+    model?: string;
+    year?: number;
+    transmission?: string;
+    fuel_type?: string;
+    width?: number;
+    length?: number;
+    height?: number;
+    curb_weight?: number;
+    max_gross_weight?: number;
+    euro_class?: string;
+    winter_ready?: boolean;
+    winter_tires?: boolean;
+    studded_tires?: boolean;
+    child_seat_space?: boolean;
+    seat_count?: number;
 }
 
 export interface Booking {
