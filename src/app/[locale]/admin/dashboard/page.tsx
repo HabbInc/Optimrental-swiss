@@ -87,30 +87,7 @@ export default function AdminDashboardPage() {
                     </div>
                 </Card>
 
-                <Card className="rounded-3xl border-none shadow-xl p-8 bg-white overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full blur-3xl -mr-16 -mt-16" />
-                    <h3 className="text-xl font-bold mb-4 flex items-center justify-between">
-                        Business Health
-                        <span className="text-xs font-normal text-slate-400">Daily Average</span>
-                    </h3>
-                    <div className="space-y-6">
-                        {[
-                            { label: 'Booking Conversion', val: '78%' },
-                            { label: 'Vehicle Utilization', val: '64%' },
-                            { label: 'Customer Satisfaction', val: '98%' }
-                        ].map((item, i) => (
-                            <div key={i} className="space-y-2">
-                                <div className="flex justify-between text-sm font-bold">
-                                    <span>{item.label}</span>
-                                    <span>{item.val}</span>
-                                </div>
-                                <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                                    <div className="h-full bg-amber-500 rounded-full" style={{ width: item.val }} />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </Card>
+                {/* Business Health section removed */}
             </div>
         </div>
     );
