@@ -130,7 +130,7 @@ export default function AdminBookingsPage() {
                                 <TableCell>
                                     <div className="font-bold text-slate-800">{b.vehicles?.name}</div>
                                     <div className="flex items-center gap-1 text-[11px] text-slate-500">
-                                        <Clock size={11} /> {b.hours} Hours • <span className="font-black text-slate-900">{b.total_price} CHF</span>
+                                        <Clock size={11} /> {b.hours} Days • <span className="font-black text-slate-900">{b.total_price} CHF</span>
                                     </div>
                                 </TableCell>
                                 <TableCell className="text-center">

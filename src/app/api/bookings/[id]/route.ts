@@ -25,7 +25,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
                 await sendAdminConfirmation(booking.customer_email, {
                     vehicleName: (booking.vehicles as any).name,
                     date: booking.booking_date,
-                    hours: booking.hours,
+                    days: booking.hours,
                     totalPrice: booking.total_price
                 });
             } catch (emailError) {

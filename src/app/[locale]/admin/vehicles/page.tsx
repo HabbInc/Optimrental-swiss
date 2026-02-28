@@ -163,7 +163,7 @@ export default function AdminVehiclesPage() {
                                     <Input name="description" defaultValue={editingVehicle?.description} className="h-12 rounded-xl" />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Price (CHF/h)</Label>
+                                    <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Price (CHF/day)</Label>
                                     <Input name="price" type="number" step="0.01" defaultValue={editingVehicle?.price_per_hour} required className="h-12 rounded-xl" />
                                 </div>
                                 <div className="space-y-2 col-span-2">
@@ -261,7 +261,7 @@ export default function AdminVehiclesPage() {
                                 </TableCell>
                                 <TableCell>
                                     <span className="font-black text-slate-700">{v.price_per_hour} CHF</span>
-                                    <span className="text-[10px] text-slate-400 font-bold ml-1 uppercase">/ HR</span>
+                                    <span className="text-[10px] text-slate-400 font-bold ml-1 uppercase">/ Day</span>
                                 </TableCell>
                                 <TableCell className="text-center">
                                     <button

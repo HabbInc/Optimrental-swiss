@@ -16,12 +16,14 @@
     "selectVehicle": "Fahrzeug auswählen",
     "date": "Datum",
     "hours": "Stunden",
+    "days": "Tage",
     "email": "E-Mail-Adresse",
     "totalPrice": "Gesamtpreis",
     "submit": "Buchung absenden",
     "success": "Buchung erfolgreich! Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
     "error": "Fehler bei der Buchung. Bitte versuchen Sie es erneut.",
-    "perHour": "CHF / Std"
+    "perHour": "CHF / Std",
+    "perDay": "CHF / Tag"
   },
   "Admin": {
     "login": {

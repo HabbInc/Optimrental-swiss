@@ -26,7 +26,7 @@ export default function BookingForm({ vehicles, locale }: { vehicles: Vehicle[],
 
     const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
     const [date, setDate] = useState<Date | undefined>(new Date());
-    const [hours, setHours] = useState<number>(1);
+    const [days, setDays] = useState<number>(1);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [licence, setLicence] = useState('');
@@ -35,7 +35,7 @@ export default function BookingForm({ vehicles, locale }: { vehicles: Vehicle[],
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    const totalPrice = selectedVehicle ? selectedVehicle.price_per_hour * hours : 0;
+    const totalPrice = selectedVehicle ? selectedVehicle.price_per_hour * days : 0;
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -57,7 +57,7 @@ export default function BookingForm({ vehicles, locale }: { vehicles: Vehicle[],
                     nationality: nationality,
                     mobile_no: mobile,
                     booking_date: format(date, 'yyyy-MM-dd'),
-                    hours,
+                    days,
                     total_price: totalPrice,
                     vehicle_name: selectedVehicle.name
                 }),
@@ -128,7 +128,7 @@ export default function BookingForm({ vehicles, locale }: { vehicles: Vehicle[],
                                 <h3 className="font-bold text-lg">{v.name}</h3>
                                 <p className="text-xs text-slate-500 line-clamp-2">{v.description}</p>
                                 <div className="flex justify-between items-center pt-2">
-                                    <span className="text-amber-600 font-black text-xl">{v.price_per_hour} <span className="text-sm">CHF / Std</span></span>
+                                                    <span className="text-amber-600 font-black text-xl">{v.price_per_hour} <span className="text-sm">CHF / Day</span></span>
                                 </div>
                             </div>
                         </div>
@@ -240,13 +240,13 @@ export default function BookingForm({ vehicles, locale }: { vehicles: Vehicle[],
                         </div>
 
                         <div className="space-y-2">
-                            <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Duration (Hours)</Label>
+                            <Label className="uppercase text-[10px] font-bold tracking-widest text-slate-500">Duration (Days)</Label>
                             <Input
                                 type="number"
                                 min="1"
-                                max="24"
-                                value={hours}
-                                onChange={(e) => setHours(Number(e.target.value))}
+                                max="30"
+                                value={days}
+                                onChange={(e) => setDays(Number(e.target.value))}
                                 className="h-12 rounded-xl"
                             />
                         </div>

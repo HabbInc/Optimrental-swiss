@@ -151,9 +151,9 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
                 <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
                     {[
-                        { title: "Standard Rental", price: "45 CHF/h", desc: "Reliable and high-quality vehicles for daily use.", icon: <Car className="w-8 h-8" /> },
-                        { title: "Airport Shuttle", price: "80 CHF/h", desc: "Punctual and comfortable transport to all Swiss airports.", icon: <MapPin className="w-8 h-8" /> },
-                        { title: "Premium Chauffeur", price: "120 CHF/h", desc: "First-class chauffeur service for your business meetings.", icon: <Shield className="w-8 h-8" /> }
+                        { title: "Standard Rental", price: "45 CHF/d", desc: "Reliable and high-quality vehicles for daily use.", icon: <Car className="w-8 h-8" /> },
+                        { title: "Airport Shuttle", price: "80 CHF/d", desc: "Punctual and comfortable transport to all Swiss airports.", icon: <MapPin className="w-8 h-8" /> },
+                        { title: "Premium Chauffeur", price: "120 CHF/d", desc: "First-class chauffeur service for your business meetings.", icon: <Shield className="w-8 h-8" /> }
                     ].map((service, i) => (
                         <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:shadow-3xl transition-all duration-500 group relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full -mr-16 -mt-16 group-hover:bg-amber-100 transition-colors" />

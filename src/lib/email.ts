@@ -60,7 +60,7 @@ const getEmailTemplate = (title: string, content: string, details: any) => `
                 </div>
                 <div class="row">
                     <span class="label">Duration</span>
-                    <span class="value">${details.hours} Hours</span>
+                    <span class="value">${details.days ?? details.hours} Days</span>
                 </div>
                 <div class="total-row">
                     <span class="total-label">Grand Total</span>

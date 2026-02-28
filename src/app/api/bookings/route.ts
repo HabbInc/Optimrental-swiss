@@ -12,7 +12,7 @@ export async function POST(req: Request) {
             nationality,
             mobile_no,
             booking_date,
-            hours,
+            days,
             vehicle_name
         } = await req.json();
 
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Vehicle not found' }, { status: 404 });
         }
 
-        const calculatedTotalPrice = vehicle.price_per_hour * hours;
+        const calculatedTotalPrice = vehicle.price_per_hour * days;
 
         // 2. Create booking in Supabase
         const { data: booking, error: bError } = await supabaseAdmin
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
                 nationality,
                 mobile_no,
                 booking_date,
-                hours,
+                hours: days,
                 total_price: calculatedTotalPrice,
                 status: 'pending'
             })
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
             await sendBookingConfirmation(customer_email, {
                 vehicleName: vehicle.name,
                 date: booking_date,
-                hours,
+                days,
                 totalPrice: calculatedTotalPrice
             });
         } catch (emailError) {

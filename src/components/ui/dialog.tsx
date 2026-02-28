@@ -55,18 +55,7 @@ function DialogContent({
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
   showCloseButton?: boolean
 }) {
-  React.useEffect(() => {
-    const prevBodyOverflow = document.body.style.overflow
-    const prevHtmlOverflow = document.documentElement.style.overflow
-
-    document.body.style.overflow = 'hidden'
-    document.documentElement.style.overflow = 'hidden'
-
-    return () => {
-      document.body.style.overflow = prevBodyOverflow
-      document.documentElement.style.overflow = prevHtmlOverflow
-    }
-  }, [])
+  // Removed scroll lock effect to allow background page scroll when modal is open
   const contentRef = React.useRef<HTMLDivElement | null>(null)
 
   const handleWheel = (e: React.WheelEvent) => {
@@ -82,6 +71,21 @@ function DialogContent({
     e.preventDefault()
   }
 
+  React.useEffect(() => {
+    const el = contentRef.current
+    if (!el) return
+    // Attach non-passive wheel listener to allow preventDefault without warnings
+    const handler = (ev: WheelEvent) => {
+      // mirror the logic from handleWheel
+      const atTop = el.scrollTop === 0
+      const atBottom = Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight
+      el.scrollTop += ev.deltaY
+      ev.preventDefault()
+    }
+    el.addEventListener('wheel', handler, { passive: false })
+    return () => el.removeEventListener('wheel', handler)
+  }, [])
+
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogOverlay />
@@ -93,7 +97,6 @@ function DialogContent({
         )}
         {...props}
         ref={contentRef}
-        onWheel={handleWheel}
       >
         {children}
         {showCloseButton && (

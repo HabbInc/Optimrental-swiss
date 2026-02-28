@@ -16,12 +16,14 @@
         "selectVehicle": "Select Vehicle",
         "date": "Date",
         "hours": "Hours",
+        "days": "Days",
         "email": "Email Address",
         "totalPrice": "Total Price",
         "submit": "Submit Booking",
         "success": "Booking successful! You will receive a confirmation email shortly.",
         "error": "Booking error. Please try again.",
-        "perHour": "CHF / hr"
+        "perHour": "CHF / hr",
+        "perDay": "CHF / day"
     },
     "Admin": {
         "login": {

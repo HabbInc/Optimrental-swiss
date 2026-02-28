@@ -73,7 +73,7 @@ export default function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
                 <div className="absolute top-6 right-6">
                     <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
                         <span className="text-slate-900 font-black text-lg">
-                            {vehicle.price_per_hour} <span className="text-[10px] uppercase text-slate-500 tracking-widest">CHF/h</span>
+                            {vehicle.price_per_hour} <span className="text-[10px] uppercase text-slate-500 tracking-widest">CHF/d</span>
                         </span>
                     </div>
                 </div>
